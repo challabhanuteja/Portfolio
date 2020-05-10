@@ -342,3 +342,18 @@ body{
     color: var(--decoration-color);
     font-weight: bold;
 }
+#hidden_iframe{
+    display: none;
+}
+#succ-response{
+    text-align: center;
+    margin: 1rem;
+    color: var(--decoration-color);
+    display: none;
+}
+#unsucc-response{
+    text-align: center;
+    margin: 1rem;
+    color: red;
+    display: none;
+}
