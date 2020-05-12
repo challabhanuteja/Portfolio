@@ -3,10 +3,13 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+  }
 :root{
-    --logo-height:5rem;
-    --logo-width:5rem;
+    --logo-height:4rem;
+    --logo-width:4rem;
     --decoration-color: #29BF89;
     --text-color:white;
     --background-color:rgb(31, 29, 29);
@@ -15,51 +18,58 @@ body{
     color: white;
 }
 /* Navbar */
-#navbar{
-    display: flex;
-    background-color: rgb(0, 0, 0, 0.5);
-    justify-content: space-between;
+.ham-burger{
     position: sticky;
-    top: 0px;
-    left: 0px;
-    align-items: center;
-    flex-wrap: wrap;
+    top: 2rem;
+    right: 1rem;
+    display: flex;
+    float: right;
+    
 }
+/* #navbar{
+    display: inline;
+    /* position: sticky; 
+    justify-content: flex-end;
+} */
 #logo{
     height: var(--logo-height);
     width: var(--logo-width);
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
+    position: sticky;
+    top: 1rem;
+    left: 1rem;
 }
 .nav-element{
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: white;
     font-family: 'Bangers', cursive;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 1rem;
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
 #nav-element-box{
     display: flex;
-    align-items: center;
+    align-items: right;
 }
-#logo-anchor{
-    margin: 5px 20px;
-}
+/* #logo-anchor{
+    margin: 0.5rem 2rem;
+    
+} */
 .nav-element:hover{
-    color: white;
-    border: 2px solid var(--decoration-color);
-    border-top-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    background-color: black;
-    padding: 0.5rem;
+    color: var(--decoration-color);
+    /* border: 2px solid var(--decoration-color); */
+    /* border-top-left-radius: 1rem; */
+    /* border-bottom-right-radius: 1rem; */
+    /* background-color: black; */
+    /* padding: 0.5rem; */
 }
 #logo:hover{
-    border: 2px solid var(--decoration-color);
+    border: 0.2rem solid var(--decoration-color);
     border-radius: 50%;
 }
 
@@ -87,7 +97,7 @@ body{
 }
 #profile-pic{
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem;
     height: auto;
     margin: 0 40px;
     border-radius: 25%;
@@ -97,7 +107,7 @@ body{
     font-size: 2rem;
 }
 .intro{
-    font-size: 3rem;
+    font-size: 3rem; 
     color: var(--decoration-color);
     font-family: 'Lobster', cursive;
 }
@@ -194,7 +204,7 @@ body{
     font-family: 'Orbitron', sans-serif;
     margin: 2rem 0;
     display: inline-block;
-    text-align: center;
+    /* text-align: center; */
 }
 .sec-heading::after{
     content: "";
@@ -282,9 +292,10 @@ body{
 .achievement{
     margin-top: 1.5rem;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     background-color: var(--background-color);
     padding: 1rem;
 }
@@ -295,9 +306,15 @@ body{
     margin: 1rem;
 }
 .ach2{
-    height: 25rem;
-    width: 25rem;
+    height: 30rem;
+    width: 30rem;
     margin: 1rem;
+    object-fit: cover;
+}
+.ach-pics{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 /*About section*/
