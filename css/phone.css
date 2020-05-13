@@ -1,12 +1,135 @@
 
+:root{
+    --logo-height:4rem;
+    --logo-width:4rem;
+    --decoration-color: #29BF89;
+    --text-color:white;
+    --background-color:rgb(31, 29, 29);
+}
 .ham-burger{
     width: 3rem;
     height: 3rem;
-    background-color: red;
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
+    position: fixed;
+    top: 1rem;
+    right: 3rem;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: right 0.7s;
 }
-#logo{
-    
+.change .ham-burger{
+    right: 32rem;
+}
+.line{
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    box-shadow: 0.1rem 0.2rem rgba(0,0,0,0.2);
+}
+.change .line-1{
+    transform: rotate(45deg) translate(0.3rem,0.8rem);
+}
+.change .line-2{
+    opacity: 0;
+}
+.change .line-3{
+    transform: rotate(-45deg) translate(0.3rem,-0.8rem);
+}
+.nav-bar{
+    width: 40rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    flex-direction: column;
+    background-color: var(--background-color);
+    transition: right .5s;
+    z-index: 199;
+}
+.change .nav-bar{
+    right: 0;
+}
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+.nav-element{
+    font-size: 3rem;
+}
+.social-media{
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    justify-content: center;
+}
+.social-media i{
+    font-size: 2.2rem;
+    margin: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #777;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.3sec;
+}
+.social-media a{
+    text-decoration: none;
+}
+.social-media i:hover{
+    background-color: cadetblue;
+}
+
+.intro {
+    font-size: 2rem;
+    color: var(--decoration-color);
+    font-family: 'Lobster', cursive;
+}
+#profile-pic{
+    max-width: 15rem;
+    margin-left: 0;
+    margin: 0 0;
+}
+.heading{
+    font-size: 2rem;
+}
+.about-body{
+    font-size: 1rem;
+}
+.sec-heading{
+    font-size: 1.4rem;
+}
+.skills{
+    font-size: 1rem;
+}
+.skill::before{
+    font-size: 1rem;
+}
+.heading::before,.heading::after{
+    height: 0.2rem;
+}
+.sec-heading::after{
+    height: 0.1rem;
+}
+.about-box::after{
+    height: 0.1rem;
+}
+.ach-img {
+    height: 15rem;
+    width: 30rem;
+}
+#achievements{
+    padding: 1rem;
+}
+.social{
+    display: none;
 }
